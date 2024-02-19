@@ -31,7 +31,8 @@
     - name: data
       debug:
         msg: "{{ item.name }}"
-      loop: "{{ json_data.workspaces }}"
+      loop: "{{ json_data.workspaces | selectattr(ws.name_workspace_twingate_name) }}"
+#      loop: "{{ json_data.workspaces }}"
 
 
     - block:
