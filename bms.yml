@@ -5,8 +5,8 @@
 
 - name: Template files
   ansible.builtin.template:
-    src: '{{ loop_bms.src }}'
-    dest: '{{ loop_bms.dst }}'
+    src: '{{ item.src }}'
+    dest: '{{ item.dst }}'
   loop:
     - { src: 'bmshost.js', dst: '{{ ws.name_workspace_bms_name }}.json' }
 
