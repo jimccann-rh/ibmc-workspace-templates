@@ -47,7 +47,7 @@
 
        - name: data
          debug:
-           var: bmslookup
+           msg: bmslookup
            #msg: "{{ twingatelookup }}"
 
 #       - name: Create templates for twingate
