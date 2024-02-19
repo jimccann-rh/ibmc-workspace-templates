@@ -1,7 +1,7 @@
-#- name: set fact
-#  set_fact:
-#    twingatelookup: "{{ item.name in ws.name_workspace_twingate_name }}"
-#  loop: "{{ json_data.workspaces }}"
+- name: set fact
+  set_fact:
+    twingatelookup: "{{ item.name in ws.name_workspace_twingate_name }}"
+  loop: "{{ json_data.workspaces }}"
 
 - block:
 
@@ -22,4 +22,4 @@
         msg: '{{ item }}'
       loop:
         - '{{ ibmcli_output }}'
-#   when: not twingatelookup | bool
+  when: not twingatelookup | bool
