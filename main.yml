@@ -30,7 +30,7 @@
 
     - name: data
       debug:
-        msg: "{{ json_data.workspaces[].name }}"
+        msg: "{{ json_data.workspaces[0].name }}"
 
 #    - block:
 
