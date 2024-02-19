@@ -1,0 +1,22 @@
+name_datacenter: "dal10"
+name_project: "ci"
+name_esxisting_ssh_key: "ci"
+name_domain_name: "ci.ibmc.devcluster.openshift.com"
+name_bmshostname: "vmware-host-0"
+name_bms_private_vlan: "000000"
+name_bms_private_subnet: "10.10.10.10/24"
+name_bms_public_vlan: "0000000"
+name_bms_public_subnet: "169.169.169.96/28"
+name_quote_id: "0000000"
+name_tags: "vsphere"
+name_vsicount: 1
+name_vsi_private_vlan: 0000000
+#twingate
+name_tg_network: "redhat"
+#gateway
+name_gateway_private_vlan: 0000000
+name_gateway_public_vlan: 000000
+#vsphere-network
+name_subnet_capacity: 64
+name_vlan_id: 0000000
+name_vlan_tags: ["generated","vcenter.cee.ibmc.devcluster.openshift.com","vsphere"]
