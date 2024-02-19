@@ -30,7 +30,7 @@
 
     - name: data
       debug:
-        msg: "{{ item.name | selectattr(ws.name_workspace_twingate_name) }}"
+        msg: "{{ item.name }}"
       loop: "{{ json_data.workspaces }}"
 
 
@@ -38,7 +38,9 @@
 
        - name: set fact
          set_fact:
-           twingatelookup: "{{ json_data.workspaces | selectattr(ws.name_workspace_twingate_name) |list }}" 
+           twingatelookup: "{{ item.name | selectattr(ws.name_workspace_twingate_name) }}" 
+         loop: "{{ json_data.workspaces }}"
+        
 
        - name: data
          debug:
