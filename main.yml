@@ -26,7 +26,7 @@
 
        - name: Create templates for BMS esxi
          include_tasks: bms.yml
-         loop: "{{ range(0, 4 + 1)|list }}"
+         loop: "{{ range(0, name_bms_count + 1)|list }}"
          loop_control:
            loop_var: loop_bms
            index_var: my_idx
