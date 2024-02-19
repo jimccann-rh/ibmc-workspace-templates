@@ -24,9 +24,17 @@
 
     - block:
 
+    - block:
+
+       - name: Create templates for twingate
+         include_tasks: twingate.yml
+#         loop: "{{ range( ws.name_bms_start, ws.name_bms_count + 1 )|list }}"
+#         loop_control:
+#           loop_var: loop_bms
+#           index_var: my_idx
+
        - name: Create templates for BMS esxi
          include_tasks: bms.yml
-         #loop: "{{ range( 0, 1 + 1 )|list }}"
          loop: "{{ range( ws.name_bms_start, ws.name_bms_count + 1 )|list }}"
          loop_control:
            loop_var: loop_bms

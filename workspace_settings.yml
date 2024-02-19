@@ -1,3 +1,4 @@
+name_iaas_classic_api_key: "'{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_API_KEY') }}' is the Classic API environment variable."
 name_datacenter: "dal10"
 name_project: "ci"
 name_esxisting_ssh_key: "ci"
@@ -12,7 +13,9 @@ name_tags: "vsphere"
 name_vsicount: 1
 name_vsi_private_vlan: 0000000
 #twingate
+name_workspace_twingate_name: "ci-vsi-twingate"
 name_tg_network: "redhat"
+name_repo_twingate: "https://github.com/jimccann-rh/ibmc-workspace-vsi-twingate.git"
 #gateway
 name_gateway_private_vlan: 0000000
 name_gateway_public_vlan: 000000
@@ -26,4 +29,4 @@ name_workspace_bms_name: "ci-bms-single-esxi"
 name_repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
 name_bms_start: 0
 name_bms_count: 0 
-name_iaas_classic_api_key: "'{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_API_KEY') }}' is the Classic API environment variable."
+
