@@ -54,7 +54,7 @@
 
        - name: Create templates for twingate
          include_tasks: twingate.yml
-      when: twingatelookup | bool
+      when: not twingatelookup | bool
 
 
 #    - block:
