@@ -1,20 +1,20 @@
-- name: set fact
-  set_fact:
-    twingatelookup: "{{ item.name in ws.name_workspace_twingate_name }}"
-  loop: "{{ json_data.workspaces }}"
-
-- name: data
-  debug:
-    var: twingatelookup
-
-- name: data workspace
-  debug:
-    msg: "{{ item.name }}"
-  loop: "{{ json_data.workspaces }}"
-
-- name: data 
-  debug:
-    msg: "{{ ws.name_workspace_twingate_name }}"
+#- name: set fact
+#  set_fact:
+#    twingatelookup: "{{ item.name in ws.name_workspace_twingate_name }}"
+#  loop: "{{ json_data.workspaces }}"
+#
+#- name: data
+#  debug:
+#    var: twingatelookup
+#
+#- name: data workspace
+#  debug:
+#    msg: "{{ item.name }}"
+#  loop: "{{ json_data.workspaces }}"
+#
+#- name: data 
+#  debug:
+#    msg: "{{ ws.name_workspace_twingate_name }}"
 
 
 - block:

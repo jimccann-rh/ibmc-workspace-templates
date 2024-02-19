@@ -1,23 +1,20 @@
-#- name: Include vars
-#  ansible.builtin.include_vars:
-#    file: workspace_settings.yml
-#    name: ws
+- block:
 
-- name: Template files
-  ansible.builtin.template:
-    src: '{{ item.src }}'
-    dest: '{{ item.dst }}'
-  loop:
-    - { src: 'bmshost.js', dst: '{{ ws.name_workspace_bms_name }}-{{ my_idx }}.json' }
-
-- name: Run ibmcloud cli
-  shell: "ibmcloud schematics workspace new -f {{ ws.name_workspace_bms_name }}-{{ my_idx }}.json"
-  register: ibmcli_output
-  failed_when: ( ibmcli_output.rc not in [ 0, 1 ] )
-
-- name: Output of ibmcli command
-  ansible.builtin.debug:
-    msg: '{{ item }}'
-  loop:
-    - '{{ ibmcli_output }}'
-
+    - name: Template files
+      ansible.builtin.template:
+        src: '{{ item.src }}'
+        dest: '{{ item.dst }}'
+      loop:
+        - { src: 'bmshost.js', dst: '{{ ws.name_workspace_bms_name }}-{{ my_idx }}.json' }
+    
+    - name: Run ibmcloud cli
+      shell: "ibmcloud schematics workspace new -f {{ ws.name_workspace_bms_name }}-{{ my_idx }}.json"
+      register: ibmcli_output
+      failed_when: ( ibmcli_output.rc not in [ 0, 1 ] )
+    
+    - name: Output of ibmcli command
+      ansible.builtin.debug:
+        msg: '{{ item }}'
+      loop:
+        - '{{ ibmcli_output }}'
+  when: bmslookup | bool
