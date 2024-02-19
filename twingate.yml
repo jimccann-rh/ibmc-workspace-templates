@@ -12,6 +12,10 @@
     msg: "{{ item.name }}"
   loop: "{{ json_data.workspaces }}"
 
+- name: data 
+  debug:
+    msg: "{{ ws.name_workspace_twingate_name }}"
+
 
 - block:
 
