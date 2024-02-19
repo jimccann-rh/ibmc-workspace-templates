@@ -6,6 +6,12 @@
   collections:
     - community.general
 
+  vars:
+    json_data: "{{ lookup('file','data.json') | from_json }}"
+    twingatelookup: false
+    bmslookup: false
+
+
   tasks:
 
     - name: Run ibmcloud cli
