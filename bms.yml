@@ -1,7 +1,7 @@
-#- name: Include vars
-#  ansible.builtin.include_vars:
-#    file: workspace_settings.yml
-#    name: ws
+- name: Include vars
+  ansible.builtin.include_vars:
+    file: workspace_settings.yml
+    name: ws
 
 - name: Template files
   ansible.builtin.template:
