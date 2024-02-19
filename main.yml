@@ -38,13 +38,15 @@
 
        - name: set fact
          set_fact:
-           twingatelookup: "{{ item.name | selectattr(ws.name_workspace_twingate_name) }}" 
+           bmslookup: "{{ item.name | selectattr(ws.name_workspace_bms_name) }}" 
+           #twingatelookup: "{{ item.name | selectattr(ws.name_workspace_twingate_name) }}" 
          loop: "{{ json_data.workspaces }}"
         
 
        - name: data
          debug:
-           msg: "{{ twingatelookup }}"
+           msg: "{{ bmslookup }}"
+           #msg: "{{ twingatelookup }}"
 
 #       - name: Create templates for twingate
 #         include_tasks: twingate.yml
