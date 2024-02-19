@@ -8,7 +8,7 @@
     "description": "create single host to mitigate issues with datacenter not installing server in under 24hrs.",
     "tags": ["{{ ws.name_tags }}", "esxi"],
     "template_repo": {
-      "url": "{{ repo_bms }}"
+      "url": "{{ ws.name_repo_bms }}"
     },
     "template_data": [
       {
