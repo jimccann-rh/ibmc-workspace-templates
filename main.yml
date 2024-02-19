@@ -15,7 +15,7 @@
 
   vars:
     json_data: "{{ lookup('file','data.json') | from_json }}"
-
+    twingatelookup: false
   tasks:
 
     - name: Run ibmcloud cli
