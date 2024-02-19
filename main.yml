@@ -28,7 +28,11 @@
         file: workspace_settings.yml
         name: ws
 
-    - block:
+    - name: data
+      debug:
+        msg: "{{ json_data.workspaces }}"
+
+#    - block:
 
 #E       - name: Create templates for twingate
 #E         include_tasks: twingate.yml
