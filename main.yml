@@ -6,16 +6,6 @@
   collections:
     - community.general
 
-  tags:
-    - bms
-
-#  vars:
-#    workspace_bms_name: "ci-bms-single-esxi"
-#    repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
-
-  vars:
-    json_data: "{{ lookup('file','data.json') | from_json }}"
-    twingatelookup: false
   tasks:
 
     - name: Run ibmcloud cli
@@ -28,41 +18,22 @@
         file: workspace_settings.yml
         name: ws
 
-    - name: data
-      debug:
-        msg: "{{ item.name }}"
-      loop: "{{ json_data.workspaces }}"
-
-
     - block:
 
        - name: set fact
          set_fact:
-           #bmslookup: "{{ item.name in (ws.name_workspace_bms_name + '-0') }}" 
            twingatelookup: "{{ item.name in ws.name_workspace_twingate_name }}" 
-           #bmslookup: "{{ item.name | selectattr('ci-bms-single-esxi-0') }}" 
-           #bmslookup: "{{ item.name | selectattr(ws.name_workspace_bms_name) }}-0" 
-           #twingatelookup: "{{ item.name | selectattr(ws.name_workspace_twingate_name) }}" 
          loop: "{{ json_data.workspaces }}"
         
-
-       - name: data
-         debug:
-           var: twingatelookup
-           #var: bmslookup
-           #msg: "{{ twingatelookup }}"
-
        - name: Create templates for twingate
          include_tasks: twingate.yml
-      when: not twingatelookup | bool
 
+    - block:
 
-#    - block:
-#
-#       - name: Create templates for BMS esxi
-#         include_tasks: bms.yml
-#         loop: "{{ range( ws.name_bms_start, ws.name_bms_count + 1 )|list }}"
-#         loop_control:
-#           loop_var: loop_bms
-#           index_var: my_idx
-#
+       - name: Create templates for BMS esxi
+         include_tasks: bms.yml
+         loop: "{{ range( ws.name_bms_start, ws.name_bms_count + 1 )|list }}"
+         loop_control:
+           loop_var: loop_bms
+           index_var: my_idx
+
