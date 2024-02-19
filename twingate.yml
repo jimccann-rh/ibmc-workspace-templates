@@ -1,23 +1,25 @@
-#- name: Include vars
-#  ansible.builtin.include_vars:
-#    file: workspace_settings.yml
-#    name: ws
+- name: set fact
+  set_fact:
+    twingatelookup: "{{ item.name in ws.name_workspace_twingate_name }}"
+  loop: "{{ json_data.workspaces }}"
 
-- name: Template files
-  ansible.builtin.template:
-    src: '{{ item.src }}'
-    dest: '{{ item.dst }}'
-  loop:
-    - { src: 'twingate.js', dst: '{{ ws.name_workspace_twingate_name }}.json' }
+- block:
 
-- name: Run ibmcloud cli
-  shell: "ibmcloud schematics workspace new -f {{ ws.name_workspace_twingate_name }}.json"
-  register: ibmcli_output
-  failed_when: ( ibmcli_output.rc not in [ 0, 1 ] )
-
-- name: Output of ibmcli command
-  ansible.builtin.debug:
-    msg: '{{ item }}'
-  loop:
-    - '{{ ibmcli_output }}'
-
+    - name: Template files
+      ansible.builtin.template:
+        src: '{{ item.src }}'
+        dest: '{{ item.dst }}'
+      loop:
+        - { src: 'twingate.js', dst: '{{ ws.name_workspace_twingate_name }}.json' }
+    
+    - name: Run ibmcloud cli
+      shell: "ibmcloud schematics workspace new -f {{ ws.name_workspace_twingate_name }}.json"
+      register: ibmcli_output
+      failed_when: ( ibmcli_output.rc not in [ 0, 1 ] )
+    
+    - name: Output of ibmcli command
+      ansible.builtin.debug:
+        msg: '{{ item }}'
+      loop:
+        - '{{ ibmcli_output }}'
+   when: not twingatelookup | bool
