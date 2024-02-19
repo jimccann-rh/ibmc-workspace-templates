@@ -27,4 +27,4 @@
         msg: '{{ item }}'
       loop:
         - '{{ ibmcli_output }}'
-  when: twingatelookup | bool
+  when: not twingatelookup | bool
