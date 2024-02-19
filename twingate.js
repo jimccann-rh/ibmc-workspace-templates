@@ -57,42 +57,6 @@
             "secure": false
           },
           {
-            "name": "bmshostname",
-            "value": "{{ ws.name_bmshostname }}-{{ my_idx }}",
-            "type": "string",
-            "secure": false
-          },
-          {
-            "name": "bms_private_vlan",
-            "value": "{{ ws.name_bms_private_vlan }}",
-            "type": "string",
-            "secure": false
-          },
-          {
-            "name": "bms_private_subnet",
-            "value": "{{ ws.name_bms_private_subnet }}",
-            "type": "string",
-            "secure": false
-          },
-          {
-            "name": "bms_public_vlan",
-            "value": "{{ ws.name_bms_public_vlan }}",
-            "type": "string",
-            "secure": false
-          },
-          {
-            "name": "bms_public_subnet",
-            "value": "{{ ws.name_bms_public_subnet }}",
-            "type": "string",
-            "secure": false
-          },
-          {
-            "name": "quote_id",
-            "value": "{{ ws.name_quote_id }}",
-            "type": "string",
-            "secure": false
-          },
-          {
             "name": "iaas_classic_username",
             "value": "{{ ws.name_iaas_classic_username }}",
             "type": "string",
