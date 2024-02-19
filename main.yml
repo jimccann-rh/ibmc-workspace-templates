@@ -8,7 +8,7 @@
 
   vars:
     json_data: "{{ lookup('file','data.json') | from_json }}"
-    twingatelookup: false
+    twingatelookup: true
     bmslookup: false
 
 
