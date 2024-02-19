@@ -1,5 +1,5 @@
 {
-    "name": "{{ workspace_name }}",
+    "name": "{{ workspace_bms_name }}-{{ my_idx }}",
     "type": [
       "terraform_v1.5"
     ],
@@ -8,7 +8,7 @@
     "description": "create single host to mitigate issues with datacenter not installing server in under 24hrs.",
     "tags": ["{{ ws.name_tags }}", "esxi"],
     "template_repo": {
-      "url": "{{ repo }}"
+      "url": "{{ repo_bms }}"
     },
     "template_data": [
       {
@@ -58,7 +58,7 @@
           },
           {
             "name": "bmshostname",
-            "value": "{{ ws.name_bmshostname }}",
+            "value": "{{ ws.name_bmshostname }}-{{ my_idx }}",
             "type": "string",
             "secure": false
           },

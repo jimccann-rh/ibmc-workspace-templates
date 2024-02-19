@@ -2,7 +2,7 @@ name_datacenter: "dal10"
 name_project: "ci"
 name_esxisting_ssh_key: "ci"
 name_domain_name: "ci.ibmc.devcluster.openshift.com"
-name_bmshostname: "vmware-host-0"
+name_bmshostname: "vmware-host"
 name_bms_private_vlan: "000000"
 name_bms_private_subnet: "10.10.10.10/24"
 name_bms_public_vlan: "0000000"
@@ -20,3 +20,8 @@ name_gateway_public_vlan: 000000
 name_subnet_capacity: 64
 name_vlan_id: 0000000
 name_vlan_tags: ["generated","vcenter.cee.ibmc.devcluster.openshift.com","vsphere"]
+name_iaas_classic_username: "accountnumber@email.com"
+#bms
+workspace_bms_name: "ci-bms-single-esxi"
+repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
+
