@@ -38,7 +38,8 @@
 
        - name: set fact
          set_fact:
-           - twingatelookup: "{{ json_data.workspaces | selectattr(ws.name_workspace_twingate_name) }}" 
+           twingatelookup: "{{ json_data.workspaces | selectattr(ws.name_workspace_twingate_name) }}" 
+
     - name: data
       debug:
         msg: "{{ twingatelookup }}"
