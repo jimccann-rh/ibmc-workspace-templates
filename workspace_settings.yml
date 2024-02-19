@@ -24,4 +24,5 @@ name_iaas_classic_username: "accountnumber@email.com"
 #bms
 name_workspace_bms_name: "ci-bms-single-esxi"
 name_repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
-name_bms_count: "3"
+name_bms_start: 0
+name_bms_count: 3
