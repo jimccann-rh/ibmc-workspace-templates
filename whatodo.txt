@@ -1,2 +1,2 @@
 run ./prep.sh
-
+cat temp.json | jq .workspaces[].name
