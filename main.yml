@@ -31,7 +31,7 @@
     - name: data
       debug:
         msg: "{{ item.name }}"
-      loop: "{{ json_data.workspaces }}"
+      loop: "{{ json_data.workspaces[0] }}"
 
 
     - block:
