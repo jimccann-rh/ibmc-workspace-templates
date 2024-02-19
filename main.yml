@@ -34,16 +34,18 @@
       loop: "{{ json_data.workspaces }}"
 
 
+    - block:
+
+       - name: Create templates for twingate
+         include_tasks: twingate.yml
+      when: json_data.workspaces | selectattr(ws.name_workspace_twingate_name) | list 
 
 #    - block:
-
-#E       - name: Create templates for twingate
-#E         include_tasks: twingate.yml
-#E
-#E       - name: Create templates for BMS esxi
-#E         include_tasks: bms.yml
-#E         loop: "{{ range( ws.name_bms_start, ws.name_bms_count + 1 )|list }}"
-#E         loop_control:
-#E           loop_var: loop_bms
-#E           index_var: my_idx
-
+#
+#       - name: Create templates for BMS esxi
+#         include_tasks: bms.yml
+#         loop: "{{ range( ws.name_bms_start, ws.name_bms_count + 1 )|list }}"
+#         loop_control:
+#           loop_var: loop_bms
+#           index_var: my_idx
+#
