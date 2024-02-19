@@ -7,6 +7,11 @@
   debug:
     var: twingatelookup
 
+- name: data workspace
+  debug:
+    msg: "{{ item.name }}"
+  loop: "{{ json_data.workspaces }}"
+
 
 - block:
 
