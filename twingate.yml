@@ -18,7 +18,7 @@
         - { src: 'twingate.js', dst: '{{ ws.name_workspace_twingate_name }}.json' }
     
     - name: Run ibmcloud cli
-      shell: "#ibmcloud schematics workspace new -f {{ ws.name_workspace_twingate_name }}.json"
+      shell: "ibmcloud schematics workspace new -f {{ ws.name_workspace_twingate_name }}.json"
       register: ibmcli_output
       failed_when: ( ibmcli_output.rc not in [ 0, 1 ] )
     
