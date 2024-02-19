@@ -38,7 +38,7 @@
 
        - name: set fact
          set_fact:
-           bmslookup: "{{ item.name in (ws.name_workspace_bms_name + '-0') }}" 
+           #bmslookup: "{{ item.name in (ws.name_workspace_bms_name + '-0') }}" 
            twingatelookup: "{{ item.name in ws.name_workspace_twingate_name }}" 
            #bmslookup: "{{ item.name | selectattr('ci-bms-single-esxi-0') }}" 
            #bmslookup: "{{ item.name | selectattr(ws.name_workspace_bms_name) }}-0" 
