@@ -26,3 +26,4 @@ name_workspace_bms_name: "ci-bms-single-esxi"
 name_repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
 name_bms_start: 0
 name_bms_count: 3
+name_iaas_classic_api_key: "'{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_API_KEY') }}' is the Classic API environment variable."

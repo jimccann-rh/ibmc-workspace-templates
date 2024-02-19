@@ -97,6 +97,12 @@
             "value": "{{ ws.name_iaas_classic_username }}",
             "type": "string",
             "secure": false
+          },
+          {
+            "name": "iaas_classic_api_key",
+            "value": "{{ ws.name_iaas_classic_api_key }}",
+            "type": "string",
+            "secure": true
           }
         ]
       }
