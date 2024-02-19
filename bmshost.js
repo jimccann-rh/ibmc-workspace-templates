@@ -45,7 +45,7 @@
             "secure": false
           },
           {
-            "name": "esxisting_ssh_key",
+            "name": "existing_ssh_key",
             "value": "{{ ws.name_esxisting_ssh_key }}",
             "type": "string",
             "secure": false
