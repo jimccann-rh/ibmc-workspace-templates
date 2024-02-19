@@ -3,6 +3,11 @@
     twingatelookup: "{{ item.name in ws.name_workspace_twingate_name }}"
   loop: "{{ json_data.workspaces }}"
 
+- name: data
+  debug:
+    var: twingatelookup
+
+
 - block:
 
     - name: Template files
