@@ -1,5 +1,5 @@
 {
-    "name": "{{ workspace_bms_name }}-{{ my_idx }}",
+    "name": "{{ ws.name_workspace_bms_name }}-{{ my_idx }}",
     "type": [
       "terraform_v1.5"
     ],

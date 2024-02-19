@@ -22,6 +22,6 @@ name_vlan_id: 0000000
 name_vlan_tags: ["generated","vcenter.cee.ibmc.devcluster.openshift.com","vsphere"]
 name_iaas_classic_username: "accountnumber@email.com"
 #bms
-workspace_bms_name: "ci-bms-single-esxi"
-repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
+name_workspace_bms_name: "ci-bms-single-esxi"
+name_repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
 
