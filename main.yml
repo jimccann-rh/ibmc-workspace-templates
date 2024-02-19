@@ -1,6 +1,6 @@
 ---
 
-- name: create schematics workspace
+- name: create schematics workspaces
   hosts: localhost
   gather_facts: true
   collections:
@@ -8,6 +8,7 @@
 
   vars:
     json_data: "{{ lookup('file','data.json') | from_json }}"
+    workspacelist: false
     twingatelookup: false 
     bmslookup: false
 
@@ -17,6 +18,7 @@
       shell: "ibmcloud schematics workspace list -j > data.json"
       register: ibmcli_output
       failed_when: ( ibmcli_output.rc not in [ 0, 1 ] )
+      when: workspacelist | bool
 
     - name: Include vars 
       ansible.builtin.include_vars:
