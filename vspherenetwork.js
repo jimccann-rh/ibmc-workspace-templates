@@ -5,7 +5,7 @@
     ],
     "location": "us-south",
     "resource_group": "Default",
-    "description": "create single host to mitigate issues with datacenter not installing server in under 24hrs.",
+    "description": "This is for vCenter and other management systems needed for vSphere.",
     "tags": ["{{ ws.name_tags }}", "vsphere network"],
     "template_repo": {
       "url": "{{ ws.name_repo_vsphere }}"
