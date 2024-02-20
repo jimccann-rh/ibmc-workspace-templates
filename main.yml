@@ -8,14 +8,14 @@
 
   vars:
     json_data: "{{ lookup('file','data.json') | from_json }}"
-    cleanconfig: true
-    workspacelist: false
+    cleanconfig:    true
+    workspacelist:  false
     twingatelookup: false 
-    bmslookup: false
-    manlookup: false
-    gatewaylookup: false
-    vspherelookup: false
-    vlanslookup: false
+    bmslookup:      false
+    manlookup:      false
+    gatewaylookup:  false
+    vspherelookup:  false
+    vlanslookup:    false
 
   tasks:
 
