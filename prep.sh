@@ -5,7 +5,7 @@ echo "Put in IASS Classic API KEY"
 read apikey
 echo "Put in IASS Classic Username"
 read username
-export IAAS_CLASSIC_API_KEY=apikey
-export IAAS_CLASSIC_USERNAME=username
+export IAAS_CLASSIC_API_KEY=$apikey
+export IAAS_CLASSIC_USERNAME=$username
 ansible-playbook main.yml
 #ansible-playbook main.yml --extra-var vlanslookup=true

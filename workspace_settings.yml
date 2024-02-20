@@ -43,6 +43,6 @@ name_vlans_router: "bcr01a.dal10"
 name_vlans_quantity: 1
 name_vlans_quantity_disconnected: 0
 name_vlans_subnet_capacity: 256
-name_vlans_vlan_tags: ["eco","connected","vsphere"]
-name_vlans_vlan_tags_disconnected: ["eco","disconnected","vsphere"]
+name_vlans_vlan_tags: '["eco","connected","vsphere"]'
+name_vlans_vlan_tags_disconnected: '["eco","disconnected","vsphere"]'
 
