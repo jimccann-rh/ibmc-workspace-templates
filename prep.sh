@@ -5,3 +5,4 @@ echo "Put in IASS Classic API KEY"
 read apikey
 export IAAS_CLASSIC_API_KEY=apikey
 ansible-playbook main.yml
+#ansible-playbook main.yml --extra-var manloop=true
