@@ -12,6 +12,8 @@
     twingatelookup: false 
     bmslookup: false
     manlookup: false
+    gatewaylookup: false
+    vspherelookup: false
 
   tasks:
 
@@ -37,6 +39,11 @@
        - name: Create template for management
          include_tasks: management.yml
 
+    - block:
+
+       - name: Create template for gateway
+         include_tasks: gateway.yml
+
 
     - block:
 
@@ -46,4 +53,9 @@
          loop_control:
            loop_var: loop_bms
            index_var: my_idx
+
+    - block:
+
+       - name: Create template for vsphere network
+         include_tasks: vspherenetwork.yml
 
