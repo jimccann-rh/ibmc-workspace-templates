@@ -1,5 +1,5 @@
-name_iaas_classic_api_key: "'{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_API_KEY') }}' is the Classic API KEY environment variable."
-name_iaas_classic_username: "'{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_USERNAME') }}' is the Classic API Username environment variable."
+name_iaas_classic_api_key: "{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_API_KEY') }}"
+name_iaas_classic_username: "{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_USERNAME') }}"
 name_datacenter: "dal10"
 name_project: "eco"
 name_esxisting_ssh_key: "eco"
