@@ -5,7 +5,7 @@
         src: '{{ item.src }}'
         dest: '{{ item.dst }}'
       loop:
-        - { src: 'bmshost.js', dst: '{{ ws.name_workspace_gateway_name }}.json' }
+        - { src: 'gateway.js', dst: '{{ ws.name_workspace_gateway_name }}.json' }
     
     - name: Run ibmcloud cli
       shell: "ibmcloud schematics workspace new -f {{ ws.name_workspace_gateway_name }}.json"
