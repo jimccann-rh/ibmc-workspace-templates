@@ -29,4 +29,8 @@ name_workspace_bms_name: "ci-bms-single-esxi"
 name_repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
 name_bms_start: 0
 name_bms_count: 0 
+#management
+name_workspace_man_name: "ci-vsi-management"
+name_repo_man: "https://github.com/jimccann-rh/ibmc-workspace-vsi.git"
+name_vsi_private_vlan: 0000000
 

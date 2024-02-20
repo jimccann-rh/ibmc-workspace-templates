@@ -11,6 +11,7 @@
     workspacelist: false
     twingatelookup: false 
     bmslookup: false
+    manlookup: false
 
   tasks:
 
@@ -27,8 +28,15 @@
 
     - block:
 
-       - name: Create templates for twingate
+       - name: Create template for twingate
          include_tasks: twingate.yml
+
+
+    - block:
+
+       - name: Create template for management
+         include_tasks: management.yml
+
 
     - block:
 
