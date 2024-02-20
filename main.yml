@@ -65,3 +65,10 @@
        - name: Create template for vlans subnets for VMs
          include_tasks: vlans.yml
 
+
+
+    - name: Remove config files (delete file)
+      ansible.builtin.file:
+        path: *.json
+        state: absent
+
