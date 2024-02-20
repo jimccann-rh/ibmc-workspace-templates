@@ -46,7 +46,7 @@
           },
           {
             "name": "gateway_id",
-            "value": "{{ ws.name_gateway_id }}",
+            "value": "{{ ws.name_vlans_gateway_id }}",
             "type": "string",
             "secure": false
           },
