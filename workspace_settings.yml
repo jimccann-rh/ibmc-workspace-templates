@@ -25,7 +25,7 @@ name_workspace_man_name: "ci-vsi-management"
 name_repo_man: "https://github.com/jimccann-rh/ibmc-workspace-vsi.git"
 name_vsi_private_vlan: 0000000
 #gateway
-name_workspace_man_name: "ci-gateway"
+name_workspace_gateway_name: "ci-gateway"
 name_repo_gateway: "https://github.com/jimccann-rh/ibmc-workspace-gateway.git"
 name_gateway_private_vlan: 0000000
 name_gateway_public_vlan: 0000000
