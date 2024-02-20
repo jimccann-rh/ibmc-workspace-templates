@@ -75,13 +75,13 @@
             "secure": false
           },
           {
-            "name": "vlans_quantity",
+            "name": "vlan_quantity",
             "value": "{{ ws.name_vlans_quantity }}",
             "type": "string",
             "secure": false
           },
           {
-            "name": "vlans_quantity_disconnected",
+            "name": "vlan_quantity_disconnected",
             "value": "{{ ws.name_vlans_quantity_disconnected }}",
             "type": "string",
             "secure": false
