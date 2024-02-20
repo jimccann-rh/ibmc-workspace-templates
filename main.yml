@@ -14,6 +14,7 @@
     manlookup: false
     gatewaylookup: false
     vspherelookup: false
+    vlanslookup: false
 
   tasks:
 
@@ -58,4 +59,9 @@
 
        - name: Create template for vsphere network
          include_tasks: vspherenetwork.yml
+
+    - block:
+
+       - name: Create template for vlans subnets for VMs
+         include_tasks: vlans.yml
 
