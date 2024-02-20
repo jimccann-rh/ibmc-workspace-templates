@@ -1,5 +1,5 @@
 name_iaas_classic_api_key: "'{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_API_KEY') }}' is the Classic API environment variable."
-name_iaas_classic_username: "accountnumber@email.com"
+name_iaas_classic_username: "'{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_USERNAME') }}' is the Classic API environment variable."
 name_datacenter: "dal10"
 name_project: "eco"
 name_esxisting_ssh_key: "eco"
@@ -43,6 +43,6 @@ name_vlans_router: "bcr01a.dal10"
 name_vlans_quantity: 1
 name_vlans_quantity_disconnected: 0
 name_vlans_subnet_capacity: 256
-name_vlans_vlan_tags: ["connected","eco","vcenter.eco.ibmc.devcluster.openshift.com","vsphere"]
-name_vlans_vlan_tags_disconnected: ["disconnected","eco","vcenter.eco.ibmc.devcluster.openshift.com","vsphere"]
+name_vlans_vlan_tags: ["eco","connected","vsphere"]
+name_vlans_vlan_tags_disconnected: ["eco","disconnected","vsphere"]
 
