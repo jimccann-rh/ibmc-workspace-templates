@@ -5,7 +5,7 @@
     ],
     "location": "us-south",
     "resource_group": "Default",
-    "description": "create single host to mitigate issues with datacenter not installing server in under 24hrs.",
+    "description": "Create managment VM",
     "tags": ["{{ ws.name_tags }}", "management"],
     "template_repo": {
       "url": "{{ ws.name_repo_man }}"
