@@ -1,0 +1,20 @@
+- block:
+
+    - name: Template files
+      ansible.builtin.template:
+        src: '{{ item.src }}'
+        dest: '{{ item.dst }}'
+      loop:
+        - { src: 'act-management.js', dst: '{{ act.name_action_man_name }}.json' }
+    
+    - name: Run ibmcloud cli
+      shell: "ibmcloud schematics action create -f {{ act.name_action_man_name }}.json"
+      register: ibmcli_output
+      failed_when: ( ibmcli_output.rc not in [ 0, 1 ] )
+    
+    - name: Output of ibmcli command
+      ansible.builtin.debug:
+        msg: '{{ item }}'
+      loop:
+        - '{{ ibmcli_output }}'
+  when: manlookup | bool

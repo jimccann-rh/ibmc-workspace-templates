@@ -1,0 +1,10 @@
+name_iaas_classic_api_key: "{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_API_KEY') }}"
+name_iaas_classic_username: "{{ lookup('ansible.builtin.env', 'IAAS_CLASSIC_USERNAME') }}"
+name_datacenter: "dal10"
+name_project: "eco"
+name_esxisting_ssh_key: "eco"
+name_tags: "vsphere"
+#management
+name_action_man_name: "Setup management server"
+name_repo_man: "https://github.com/jimccann-rh/ibmc-action-nfs-ansible.git"
+name_playbook: "main.yml"
