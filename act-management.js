@@ -4,7 +4,7 @@
     "location": "us-south",
     "resource_group": "Default",
     "bastion_connection_type": "ssh",
-    "inventory_connection_type": "winrm", 
+    "inventory_connection_type": "ssh", 
     "source": {
         "source_type" : "git",
         "git" : {
