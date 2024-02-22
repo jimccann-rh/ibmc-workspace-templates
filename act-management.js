@@ -1,5 +1,5 @@
 {
-    "name": ">{{ act.name_actions_man_name }}",
+    "name": ">{{ act.name_action_man_name }}",
     "description": "Setup management server",
     "location": "us-south",
     "resource_group": "Default",
