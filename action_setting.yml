@@ -5,6 +5,6 @@ name_project: "eco"
 name_esxisting_ssh_key: "eco"
 name_tags: "vsphere"
 #management
-name_action_man_name: "Setup-management-server"
+name_action_man_name: "setup-management-server"
 name_repo_man: "https://github.com/jimccann-rh/ibmc-action-nfs-ansible.git"
 name_playbook: "main.yml"
