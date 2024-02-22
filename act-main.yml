@@ -22,7 +22,7 @@
 
     - name: Include vars 
       ansible.builtin.include_vars:
-        file: action_settings.yml
+        file: action_setting.yml
         name: act
 
     - block:
