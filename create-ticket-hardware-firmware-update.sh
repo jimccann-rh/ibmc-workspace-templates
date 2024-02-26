@@ -9,7 +9,7 @@ hardware=$(jq '.[].id' data.json)
 
 for id in $hardware; do
   echo "ID: $id creating ticket"
-  ibmcloud sl ticket create --title "update Cloud portal" --body "Please update IBM Cloud portal I have updated my firmware and portal still says firmware updates needed" --subject-id 1021 --attachment $id --attachment-type hardware --rootpwd passw0rd
+  ibmcloud sl ticket create --title "update Cloud portal" --body "Please update IBM Cloud portal I have updated my firmware and portal still says firmware updates needed, check the logs they will show I have done a firmware update." --subject-id 1021 --attachment $id --attachment-type hardware --rootpwd passw0rd
 done
 
 

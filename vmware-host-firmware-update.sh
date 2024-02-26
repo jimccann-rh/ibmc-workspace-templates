@@ -20,8 +20,8 @@ for id in $vmware; do
   ibmcloud sl hardware power-off -f $id
 done
 
-echo "waiting 60 seconds for shutdown of systems"
-sleep 60
+echo "waiting 120 seconds for shutdown of systems"
+sleep 120
 
 for id in $vmware; do
   echo "ID: $id updating firmware"
