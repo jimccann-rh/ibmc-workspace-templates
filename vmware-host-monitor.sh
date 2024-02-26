@@ -7,13 +7,17 @@
 
 ibmcloud login
 
+
+emailid=$(ibmcloud sl call-api Account getUsers --output json | jq -r '.[] | select(.email=="jimccann@redhat.com") | .id')
 ibmcloud sl hardware list --output json > data.json
 vmware=$(jq '.[] | select(.hostname | contains("vmware")) |  .id' data.json)
 vmwarename=$(jq '.[] | select(.hostname | contains("vmware")) | {"id": .id, "hostname": .hostname, "privateip": .primaryBackendIpAddress}' data.json)
 vmwareip=$(jq '.[] | select(.hostname | contains("vmware")) |  .primaryBackendIpAddress' data.json)
 vmwareidip=($(jq '.[] | select(.hostname | contains("vmware")) | .id, .primaryBackendIpAddress' data.json))
 data=($(jq '.[] | select(.hostname | contains("vmware")) | .id, .primaryBackendIpAddress' data.json))
-echo $vmwarename 
+echo $vmwarename
+echo $emailid
+#sleep 60 
 #echo $vmwareidip 
 
 #echo "${vmwareidip[1]}"
@@ -28,6 +32,7 @@ while [[ $i -lt ${#data[@]} ]]; do
     # Print the first two items
     printf "%s %s\n" "${data[$i]}" "${data[$((i + 1))]}"
     ibmcloud sl call-api SoftLayer_Network_Monitor_Version1_Query_Host createObject --parameters '[{ "hardwareId": '${data[$i]}', "ipAddress": '${data[$((i + 1))]}', "queryTypeId": 1, "responseActionId": 2, "status": "ON"}]'
+    ibmcloud sl call-api SoftLayer_User_Customer_Notification_Hardware createObject --parameters '[{ "hardwareId": '${data[$i]}', "userId": '${emailid}' }]'
   fi
   # Increment the index by 2 to skip the processed items
   i=$((i + 2))

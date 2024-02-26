@@ -5,11 +5,11 @@ name_project: "eco"
 name_esxisting_ssh_key: "eco"
 name_domain_name: "eco.ibmc.devcluster.openshift.com"
 name_bmshostname: "vmware-host"
-name_bms_private_vlan: "000000"
-name_bms_private_subnet: "10.10.10.10/24"
-name_bms_public_vlan: "0000000"
-name_bms_public_subnet: "169.169.169.96/28"
-name_quote_id: "0000000"
+name_bms_private_vlan: "3397190"
+name_bms_private_subnet: "10.177.231.192/26"
+name_bms_public_vlan: "3397188"
+name_bms_public_subnet: "169.46.99.144/28"
+name_quote_id: "3022938"
 name_tags: "vsphere"
 #twingate
 name_workspace_twingate_name: "eco-vsi-twingate"
@@ -19,7 +19,7 @@ name_repo_twingate: "https://github.com/jimccann-rh/ibmc-workspace-vsi-twingate.
 name_workspace_bms_name: "eco-bms-single-esxi"
 name_repo_bms: "https://github.com/jimccann-rh/ibmc-workspace-bms-single-quote.git"
 name_bms_start: 0
-name_bms_count: 0 
+name_bms_count: 3 
 #management
 name_workspace_man_name: "eco-vsi-management"
 name_repo_man: "https://github.com/jimccann-rh/ibmc-workspace-vsi.git"

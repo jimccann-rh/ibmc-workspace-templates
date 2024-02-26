@@ -11,7 +11,7 @@
     cleanconfig:    true
     workspacelist:  false
     twingatelookup: false 
-    bmslookup:      false
+    bmslookup:      true
     manlookup:      false
     gatewaylookup:  false
     vspherelookup:  false
