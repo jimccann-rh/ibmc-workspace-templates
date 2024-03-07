@@ -11,7 +11,7 @@
     cleanconfig:    true
     workspacelist:  false
     manlookup:      false
-    twingatelookup: true
+    twingatelookup: false
 
   tasks:
 
