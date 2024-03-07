@@ -11,6 +11,7 @@
     cleanconfig:    true
     workspacelist:  false
     manlookup:      false
+    twingatelookup: true
 
   tasks:
 
@@ -29,6 +30,9 @@
 
        - name: Create template for action management
          include_tasks: act-management.yml
+
+       - name: Create template for action twingate
+         include_tasks: act-twingate.yml
 
     - name: Remove config files (delete file)
       file:

@@ -1,6 +1,6 @@
 {
-    "name": "{{ act.name_action_man_name }}",
-    "description": "Setup management server",
+    "name": "{{ act.name_action_twingate_name }}",
+    "description": "Update twingate",
     "location": "us-south",
     "resource_group": "Default",
     "bastion_connection_type": "ssh",
@@ -8,10 +8,10 @@
     "source": {
         "source_type" : "git",
         "git" : {
-            "git_repo_url": "{{ act.name_repo_man }}"
+            "git_repo_url": "{{ act.name_repo_twingate }}"
         }
     },
-    "command_parameter": "{{ act.name_playbook_man }}",
+    "command_parameter": "{{ act.name_playbook_twingate }}",
     "bastion": {},
     "bastion_credentials": {
 	    "metadata": {}

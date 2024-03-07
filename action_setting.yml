@@ -7,4 +7,9 @@ name_tags: "vsphere"
 #management
 name_action_man_name: "setup-management-server"
 name_repo_man: "https://github.com/jimccann-rh/ibmc-action-nfs-ansible.git"
-name_playbook: "main.yml"
+name_playbook_man: "main.yml"
+
+#twingate
+name_action_twingate_name: "Twingate-update"
+name_repo_twingate: "https://github.com/jimccann-rh/update-twingate-ansible.git"
+name_playbook_twingate: "main.yml"
